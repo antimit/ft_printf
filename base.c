@@ -22,7 +22,7 @@ int	print_hexadecimal(char character, unsigned int num)
 	return (count);
 }
 
-char	*ft_strcpy(char *dest, const char *src)
+static char	*ft_strcpy(char *dest, const char *src)
 {
 	size_t	i;
 
@@ -34,7 +34,7 @@ char	*ft_strcpy(char *dest, const char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }
 
 int	print_hex_digit(unsigned char digit)
