@@ -40,7 +40,7 @@ static char	*ft_strcpy(char *dest, const char *src)
 int	print_hex_digit(unsigned char digit)
 {
 	int		count;
-	char	hex_chars[16];
+	char	hex_chars[17];
 
 	ft_strcpy(hex_chars, "0123456789abcdef");
 	count = write(1, &hex_chars[digit], 1);
