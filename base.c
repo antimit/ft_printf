@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   base.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: antimit <antimit@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 16:30:56 by antimit           #+#    #+#             */
+/*   Updated: 2024/10/22 16:52:28 by antimit          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	print_hexadecimal(char character, unsigned int num)
 {
 	char	*x;
-	char	*X;
+	char	*x_b;
 	char	c;
 	int		count;
 
 	x = "0123456789abcdef";
-	X = "0123456789ABCDEF";
+	x_b = "0123456789ABCDEF";
 	count = 0;
 	if (num >= 16)
 	{
@@ -17,7 +29,7 @@ int	print_hexadecimal(char character, unsigned int num)
 	if (character == 'x')
 		c = x[num % 16];
 	else
-		c = X[num % 16];
+		c = x_b[num % 16];
 	count += write(1, &c, 1);
 	return (count);
 }

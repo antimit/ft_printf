@@ -1,5 +1,16 @@
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: antimit <antimit@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 16:31:05 by antimit           #+#    #+#             */
+/*   Updated: 2024/10/22 16:51:03 by antimit          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <unistd.h>
 
 int	ft_printf(const char *format, ...)
@@ -13,7 +24,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			count += print_format(*(++format), ap); // This
+			count += print_format(*(++format), ap);
 		}
 		else
 			count += write(STDOUT_FILENO, format, 1);

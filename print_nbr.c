@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_nbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: antimit <antimit@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 16:31:27 by antimit           #+#    #+#             */
+/*   Updated: 2024/10/22 16:43:00 by antimit          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	print_nbr(int num)
@@ -24,8 +36,8 @@ int	print_nbr(int num)
 
 int	unsigned_print_nbr(unsigned int num)
 {
-	int count;
-	char c;
+	int		count;
+	char	c;
 
 	count = 0;
 	if (num >= 10)
